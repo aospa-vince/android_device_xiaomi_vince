@@ -200,8 +200,6 @@ on post-fs-data
     mkdir /data/vendor/audio/acdbdata 0770 media audio
     mkdir /data/vendor/audio/acdbdata/delta 0770 media audio
 
-    setprop vold.post_fs_data_done 1
-
     # Create FM dir for patchdownloader
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
@@ -233,6 +231,10 @@ on post-fs-data
 
     # Create IOP  deamon related dirs
     mkdir /data/vendor/iop 0700 root system
+
+    # keep that at the end of on post-fs-data
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
