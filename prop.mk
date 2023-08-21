@@ -99,6 +99,7 @@ persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aac-aptx-aptxhd-ldac
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 bluetooth.sco.disable_enhanced_connection=1 \
+bluetooth.le.disable_apcf_extended_features=1 \
 bluetooth.hardware.power.operating_voltage_mv=3300
 
 # Blur
