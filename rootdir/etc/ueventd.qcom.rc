@@ -408,3 +408,6 @@ firmware_directories /vendor/firmware_mnt/image/
 # /dev/sensors only supports an ioctl to get the current SLPI timestamp
 # allow the sensors daemon to perform this as non-root
 /dev/sensors                            0660   root       system
+
+# Charger
+/sys/class/power_supply/battery  battery_charging_enabled  0660  system  system
