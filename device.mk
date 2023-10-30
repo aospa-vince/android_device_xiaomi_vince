@@ -16,6 +16,9 @@
 
 $(call inherit-product, vendor/xiaomi/vince/vince-vendor.mk)
 
+# APEX
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # Inherit ViPER4AndroidFX
 $(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
 
@@ -40,7 +43,6 @@ PRODUCT_PACKAGES += \
     WifiOverlay
 
 # APEX
-OVERRIDE_TARGET_FLATTEN_APEX := true
 OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
 # Screen density
