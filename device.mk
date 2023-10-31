@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     VinceSettings \
     VinceSettingsProvider \
     VinceSystemUI \
+    VinceTelephony \
     TetheringConfigOverlay \
     WifiOverlay
 
