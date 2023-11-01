@@ -89,6 +89,12 @@ function blob_fixup() {
 	vendor/lib/libmmcamera_ppeiscore.so)
 	    "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
 	;;
+    vendor/lib/libts_detected_face_hal.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+    ;;
+    vendor/lib/libts_face_beautify_hal.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+    ;;
 	vendor/lib/libmmcamera2_iface_modules.so)
 	    # Always set 0 (Off) as CDS mode in iface_util_set_cds_mode
 	    sed -i -e 's|\x1d\xb3\x20\x68|\x1d\xb3\x00\x20|g' "${2}"
