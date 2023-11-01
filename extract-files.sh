@@ -121,4 +121,7 @@ done
 # Camera debug log file
 sed -i "s|persist.camera.debug.logfile|persist.vendor.camera.dbglog|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera_dbg.so
 
+# libhidlbase-v32
+sed -i "s|libhidlbase.so|v32hidlbase.so|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/libvendor.goodix.hardware.fingerprint@1.0.so
+
 "${MY_DIR}/setup-makefiles.sh"
