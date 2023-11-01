@@ -95,8 +95,4 @@ void vendor_load_properties()
     property_override("bluetooth.device.default_name", "Redmi 5 Plus");
     property_override("bluetooth.profile.sap.server.enabled", "false");
     property_override("bluetooth.profile.asha.central.enabled", "false");
-
-    // Override dalvik minidebuginfo generation
-    property_override("dalvik.vm.minidebuginfo", "false");
-    property_override("dalvik.vm.dex2oat-minidebuginfo", "false");
 }
