@@ -361,7 +361,8 @@ PRODUCT_COPY_FILES += \
 # QTI Components
 TARGET_COMMON_QTI_COMPONENTS += \
     bt \
-    perf
+    perf \
+    telephony
 
 # Ramdisk
 PRODUCT_PACKAGES += \

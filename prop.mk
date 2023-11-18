@@ -130,10 +130,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 ro.charger.disable_init_blank=true \
 ro.charger.enable_suspend=true
 
-# Cne
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-persist.vendor.cne.feature=1
-
 # Display/Graphics
 PRODUCT_VENDOR_PROPERTIES += \
 debug.gralloc.enable_fb_ubwc=1 \
@@ -158,7 +154,6 @@ sdm.debug.disable_skip_validate=1
 
 # DPM
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-persist.vendor.dpm.feature=1 \
 persist.vendor.dpmhalservice.enable=1 \
 persist.vendor.dpm.loglevel=0 \
 persist.vendor.mwqem.enable=1
@@ -216,10 +211,6 @@ persist.sys.fuse.transcode_user_control=true \
 persist.sys.fuse.transcode_enabled=false
 
 # Network manager daemon
-PRODUCT_VENDOR_PROPERTIES += \
-ro.vendor.use_data_netmgrd=true \
-persist.vendor.data.mode=concurrent
-
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.data.netmgrd.qos.enable=true
 
@@ -235,28 +226,13 @@ PRODUCT_VENDOR_PROPERTIES += \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
-persist.radio.multisim.config=dsds \
 persist.vendor.data.iwlan.enable=true \
 persist.vendor.radio.add_power_save=1 \
-persist.vendor.radio.apm_sim_not_pwdn=1 \
-persist.vendor.radio.custom_ecc=1 \
 persist.vendor.radio.hw_mbn_update=0 \
-persist.vendor.radio.procedure_bytes=SKIP \
-persist.vendor.radio.sib16_support=1 \
 persist.vendor.radio.mt_sms_ack=30 \
-ro.telephony.default_network=22,22 \
 ro.telephony.call_ring.multiple=false \
 ro.telephony.use_old_mnc_mcc_format=true \
 vendor.service.qti.ims.enabled=1
-
-PRODUCT_SYSTEM_PROPERTIES += \
-persist.vendor.ims.disableIMSLogs=1 \
-persist.vendor.ims.disableADBLogs=1 \
-persist.vendor.ims.disableDebugDataPathLogs=1 \
-persist.vendor.ims.disableDebugLogs=1 \
-persist.vendor.ims.disableSigHandler=1 \
-persist.vendor.ims.disableQXDMLogs=1 \
-ril.subscription.types=NV,RUIM
 
 # SOC
 PRODUCT_VENDOR_PROPERTIES += \
