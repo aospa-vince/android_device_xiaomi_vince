@@ -1,4 +1,4 @@
 # ViPER4AndroidFX
 allow hal_audio_default hal_audio_default:process { execmem };
-get_prop(hal_audio_default, vendor_audio_prop)
-set_prop(hal_audio_default, vendor_audio_prop)
+get_prop(hal_audio_default, vendor_audio_prop);
+set_prop(hal_audio_default, vendor_audio_prop);

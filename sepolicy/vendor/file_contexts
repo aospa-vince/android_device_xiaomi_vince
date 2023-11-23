@@ -27,9 +27,6 @@
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.wifi@1\.0-service\.vince u:object_r:hal_wifi_default_exec:s0
 
-# FPS Info
-/sys/devices/virtual/graphics/fb0/measured_fps                              u:object_r:sysfs_fps:s0
-
 # Ir
 /dev/peel_ir					u:object_r:lirc_device:s0
 

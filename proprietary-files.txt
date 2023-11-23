@@ -910,7 +910,7 @@ vendor/lib64/libvpplibrary.so|89b49c112864bf0d33c07c78fb7750d4bd7eb663
 # Novatek touchscreen firmware - from vince
 etc/firmware/novatek_ts_fw.bin:vendor/firmware/novatek_ts_fw.bin|12f7299c9148dbacf960bd8d835ddfca8f882a8e
 
-# Perf (msm_irqbalance) - from daisy-user-10-QKQ1.191002.002-V11.0.18.0.QDLMIXM-release-keys
+# Perf (msm_irqbalance) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/msm_irqbalance|b5e55b4b0934b65b7dd5d2201f9a70f6f77a4e7c
 vendor/etc/msm_irqbalance.conf|3e45e1da03ab49ce9d3f855011aca00f1e417a53
 

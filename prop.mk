@@ -2,19 +2,6 @@
 # prop.mk for vince
 #
 
-# ART/Dex2oat
-PRODUCT_VENDOR_PROPERTIES += \
-dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-dalvik.vm.boot-dex2oat-threads=8 \
-dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-dalvik.vm.dex2oat-filter=quicken \
-dalvik.vm.dex2oat-threads=8 \
-dalvik.vm.dex2oat64.enabled=true \
-dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-dalvik.vm.image-dex2oat-filter=quicken \
-dalvik.vm.image-dex2oat-threads=8 \
-dalvik.vm.systemuicompilerfilter=speed
-
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 af.fast_track_multiplier=1 \
@@ -126,9 +113,12 @@ persist.camera.stats.test=5 \
 vidc.enc.dcvs.extra-buff-count=2
 
 # Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-ro.charger.disable_init_blank=true \
-ro.charger.enable_suspend=true
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+ro.charger.disable_init_blank=true
+
+# Dalvik
+PRODUCT_VENDOR_PROPERTIES += \
+dalvik.vm.systemuicompilerfilter=speed
 
 # Display/Graphics
 PRODUCT_VENDOR_PROPERTIES += \
@@ -161,10 +151,6 @@ persist.vendor.mwqem.enable=1
 # DRM
 PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
-
-# Fast mass storage
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.vold.umsdirtyratio=50
 
 # Feature flags
 PRODUCT_VENDOR_PROPERTIES += \
@@ -236,7 +222,6 @@ vendor.service.qti.ims.enabled=1
 
 # SOC
 PRODUCT_VENDOR_PROPERTIES += \
-ro.soc.manufacturer=QTI \
 ro.soc.model=MSM8953
 
 # SurfaceFlinger

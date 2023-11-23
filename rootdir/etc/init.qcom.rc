@@ -245,7 +245,7 @@ on post-fs-data
     setprop vold.post_fs_data_done 1
 
 on property:sys.boot_completed=1
-    write /dev/kmsg "Boot completed "
+    write /dev/kmsg "Boot completed"
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -332,11 +332,6 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     group system
     disabled
     oneshot
-
-on boot
-    # FPS Info
-    chown system graphics /sys/class/graphics/fb0/measured_fps
-    chmod 0666 /sys/class/graphics/fb0/measured_fps
 
 on property:vendor.post_boot.parsed=1
     # Reset read ahead to 128kb
